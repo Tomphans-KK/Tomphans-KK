@@ -1,0 +1,13 @@
+name: Build and Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Run mock build
+      run: |
+        python -c 'print("Build successful")'
+        exit 0
+      shell: bash
